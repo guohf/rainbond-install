@@ -5,6 +5,13 @@ docker-envs:
     - template: jinja
     - makedirs: True
 
+certificate-signed-goodrainme:
+  file.managed:
+    - source: salt://proxy/ssl/goodrain.me/server.crt
+    - name: /etc/docker/certs.d/goodrain.me/
+    - template: jinja
+    - makedirs: True
+
 docker-envs-old:
   file.managed:
     - source: salt://docker/files/docker.sh
