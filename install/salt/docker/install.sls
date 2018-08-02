@@ -8,7 +8,7 @@ docker-envs:
 certificate-signed-goodrainme:
   file.managed:
     - source: salt://proxy/ssl/goodrain.me/server.crt
-    - name: /etc/docker/certs.d/goodrain.me/
+    - name: /etc/docker/certs.d/goodrain.me/server.crt
     - template: jinja
     - makedirs: True
 
